@@ -12,10 +12,11 @@ public class MessageEventListener implements EventListener {
 
 
     private Logger logger = LoggerFactory.getLogger(MessageEventListener.class);
+
     @Override
     public void doEvent(LotteryResult result) {
 
-        logger.info("给用户 {} 发送短信通知：{}",result.getuId(),result.getMsg());
+        logger.info("给用户 {} 发送短信通知：{}", result.getuId(), result.getMsg());
 
     }
 }

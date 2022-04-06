@@ -1,7 +1,5 @@
 package com.hehe.istackdemodesign1802;
 
-import com.hehe.istackdemodesign1802.event.EventManager;
-
 import java.util.Date;
 
 /**
@@ -9,8 +7,6 @@ import java.util.Date;
  * @date 2022/01/08
  **/
 public class LotteryServiceImpl extends LotteryService {
-
-
 
 
     private MinibusTargetService minibusTargetService = new MinibusTargetService();
@@ -21,6 +17,6 @@ public class LotteryServiceImpl extends LotteryService {
         //摇号
         String lottery = minibusTargetService.lottery(uId);
         //结果
-        return new LotteryResult(uId,lottery,new Date());
+        return new LotteryResult(uId, lottery, new Date());
     }
 }
