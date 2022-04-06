@@ -9,8 +9,9 @@ import com.hehe.istackdemodesign1802.LotteryResult;
 public interface EventListener {
 
     /**
+     * 监听处理
      *
-     * @param result
+     * @param result  得到的结果
      */
     void doEvent(LotteryResult result);
 }

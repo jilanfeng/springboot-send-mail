@@ -5,7 +5,6 @@ import com.hehe.client.MyClient;
 import com.hehe.threadLocalTest.HttpFilter;
 import com.hehe.threadLocalTest.HttpInterceptor;
 import com.thebeastshop.forest.springboot.annotation.ForestScan;
-import lombok.Synchronized;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.web.servlet.FilterRegistrationBean;

@@ -3,28 +3,32 @@ package com.hehe.gos;
 import lombok.Getter;
 
 /**
+ * 策略枚举
+ *
  * @author 刘伟锋
  * @date 2021/10/06
  **/
 @Getter
 public enum StrategyEnum {
-  ADD("+") {
-      @Override
-      public int exec(int a, int b) {
-          return a + b;
-      }
-  },
+
+
+    ADD("+") {
+        @Override
+        public int exec(int a, int b) {
+            return a + b;
+        }
+    },
     SUB("_") {
         @Override
         public int exec(int a, int b) {
-        return a-b;
+            return a - b;
         }
     },
 
     MUTI("*") {
         @Override
         public int exec(int a, int b) {
-            return a*b;
+            return a * b;
         }
     },
     ;
@@ -45,6 +49,6 @@ public enum StrategyEnum {
         this.value = value;
     }
 
-    public abstract int exec(int a,int b);
+    public abstract int exec(int a, int b);
 
 }

@@ -3,7 +3,6 @@ package com.hehe.istackdemodesign1802.event;
 import com.hehe.istackdemodesign1802.LotteryResult;
 import com.hehe.istackdemodesign1802.event.listener.EventListener;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -18,12 +17,12 @@ public class EventManager {
 
     public EventManager(Enum<EventType>... operations) {
         for (Enum<EventType> operation : operations) {
-            this.listeners.put(operation,new ArrayList<>());
+            this.listeners.put(operation, new ArrayList<>());
         }
     }
 
     public enum EventType {
-        MQ,Message
+        MQ, Message
     }
 
     /**
@@ -32,7 +31,7 @@ public class EventManager {
      * @param eventType
      * @param listener
      */
-    public void subscribe(Enum<EventType> eventType,EventListener listener) {
+    public void subscribe(Enum<EventType> eventType, EventListener listener) {
         List<EventListener> users = listeners.get(eventType);
         users.add(listener);
     }
@@ -44,7 +43,7 @@ public class EventManager {
      * @param eventType
      * @param listener
      */
-    public void unSubScribe(Enum<EventType> eventType,EventListener listener) {
+    public void unSubScribe(Enum<EventType> eventType, EventListener listener) {
 
 
         List<EventListener> users = listeners.get(eventType);
